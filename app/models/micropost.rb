@@ -1,4 +1,5 @@
 class Micropost < ApplicationRecord
+  has_many :comments, dependent: :destroy
   belongs_to :user
   has_one_attached :image
   default_scope -> { order(created_at: :desc) }
@@ -12,7 +13,11 @@ class Micropost < ApplicationRecord
 
  	def display_image
  		image.variant(resize_to_limit: [500, 500])
- 	end
+   end
+   
+  
+
+
 end
 
 

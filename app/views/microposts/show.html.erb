@@ -1,0 +1,24 @@
+	<% provide(:title, @comment.user_id) %>
+	<div class="row">
+
+
+		<div class="col-md-8">
+			<% if @comments.any? %>
+				<h1><%= @micropost.content%></h1>
+
+				<h3>Comment (<%= @comments.count %>)</h3>
+				
+						<%= render @comment %>
+			
+			<% else %>
+					<h1><%= @micropost.content%></h1>
+
+					<ol class="microposts">
+						<p>Bạn có muốn là người comment đầu tiên</p>
+					</ol>
+			<% end %>
+		</div>
+	</div>
+
+	<%= render 'shared/comment_form'%>
+
