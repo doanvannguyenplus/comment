@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'active_storage_validations', '0.8.2'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-gem 'image_processing', '1.9.3'
+gem 'image_processing', '1.12.2'
 
 gem 'mini_magick', '4.9.5'
 # Reduces boot times through caching; required in config/boot.rb
